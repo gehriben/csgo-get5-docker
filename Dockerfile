@@ -34,8 +34,8 @@ ENV HOME_DIR=/home/user \
     STEAMCMD_DIR=/home/user/Steam \
     CSGO_DIR=/home/user/csgo-server \
     STEAMCMD_URL=https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz \
-    METAMOD_URL=https://mms.alliedmods.net/mmsdrop/1.11/mmsource-1.11.0-git1144-linux.tar.gz \
-    SOURCEMOD_URL=https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6504-linux.tar.gz \
+    METAMOD_URL=https://mms.alliedmods.net/mmsdrop/1.11/mmsource-1.11.0-git1148-linux.tar.gz \
+    SOURCEMOD_URL=https://sm.alliedmods.net/smdrop/1.11/sourcemod-1.11.0-git6934-linux.tar.gz \
     GET5_URL=https://github.com/splewis/get5/releases/download/0.7.2/get5_0.7.2.zip
 WORKDIR $HOME_DIR
 COPY --chown=user --chmod=755 server-scripts/server-update.sh $HOME_DIR/
@@ -55,13 +55,17 @@ RUN apt-get -qq update \
        && wget -q -O - $SOURCEMOD_URL | tar -xz -C $CSGO_DIR/csgo \
        && wget -q -O get5.zip $GET5_URL \
        && unzip -q get5.zip \
-       && rsync -aq get5/addons/ $CSGO_DIR/csgo/addons \
-       && rsync -aq get5/cfg/ $CSGO_DIR/csgo/cfg \
-       && rm -rf get5 get5.zip" \
+       && chmod -R 755 addons \
+       && chmod -R 755 cfg \
+       && rsync -aq addons/ $CSGO_DIR/csgo/addons \
+       && rsync -aq cfg/ $CSGO_DIR/csgo/cfg \
+       && rm -rf addons cfg get5.zip" \
     && apt-get -qq purge -y unzip rsync wget \
     && apt-get -qq autoremove -y \
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/*
+
+# && ln -s /home/user/Steam/linux32/steamclient.so /home/user/.steam/sdk32/steamclient.so" \
 
 ######################
 # COPY LAUNCH SCRIPT #
@@ -79,7 +83,7 @@ COPY --chown=user cfg/* $CSGO_DIR/csgo/cfg/
 # Label this image with the image version and installed CSGO version
 # To get the version of the latest CSGO patch, run
 # curl -s "http://api.steampowered.com/ISteamApps/UpToDateCheck/v1?appid=730&version=0" | jq .response.required_version
-ARG CSGO_VERSION=13806
+ARG CSGO_VERSION=13857
 LABEL csgo_version=$CSGO_VERSION
 
 # Check that the installed version of CSGO matches the label of this image
@@ -94,4 +98,4 @@ RUN INSTALLED_VERSION="$(sed -rn 's/PatchVersion=([0-9]+).([0-9]+).([0-9]+).([0-
 ############
 ENV UPDATE_ON_LAUNCH=1
 USER user
-CMD ["bash", "server-launch.sh"]
+ENTRYPOINT ["bash", "server-launch.sh"]
