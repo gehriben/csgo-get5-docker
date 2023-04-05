@@ -8,5 +8,5 @@ docker run -it --network=host \
                    'num_maps': 3, \
                    'maplist': ['de_dust2', 'de_inferno', 'de_mirage', 'de_nuke', 'de_overpass', 'de_train', 'de_vertigo'], \
                    'skip_veto': False }" \
- csgo
+ gehriben/csgo
 
