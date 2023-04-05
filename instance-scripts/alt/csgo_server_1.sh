@@ -1,10 +1,11 @@
 docker run -it --network=host \
- -e PASSWORD=password \
- -e RCON_PASSWORD=rconpassword \
- -e GOTV_PASSWORD=gtovpassword \
- -e PORT=27116 \
- -e GOTV_PORT=27121 \
- -e MATCH_CONFIG="{'matchid': '81a99ef9a2844c278c2bda2f5a77a793', \
+  csgo \
+ --password password \
+ --rcon-password rconpassword \
+ --gotv-password gtovpassword \
+ --port 27115 \
+ --gotv-port 27120 \
+ --match-config "{'matchid': '81a99ef9a2844c278c2bda2f5a77a793', \
                    'num_maps': 3, \
                    'maplist': ['de_dust2', 'de_inferno', 'de_mirage', 'de_nuke', 'de_overpass', 'de_train', 'de_vertigo'], \
                    'skip_veto': False, \
@@ -21,6 +22,5 @@ docker run -it --network=host \
                                          979550479724346962: 'Boombl4', \
                                          186841562108230104: 'electronic', \
                                          726408891643982724: 'Perfecto', \
-                                         512316566954794515: 'flamie'}}}" \
- csgo
+                                         512316566954794515: 'flamie'}}}"
 

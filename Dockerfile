@@ -71,6 +71,7 @@ RUN apt-get -qq update \
 # COPY LAUNCH SCRIPT #
 ######################
 COPY --chown=user --chmod=755 server-scripts/server-launch.sh $HOME_DIR/
+COPY --chown=user --chmod=755 server-scripts/server-launch_3.sh $HOME_DIR/
 
 ################
 # COPY CONFIGS #
@@ -98,4 +99,5 @@ RUN INSTALLED_VERSION="$(sed -rn 's/PatchVersion=([0-9]+).([0-9]+).([0-9]+).([0-
 ############
 ENV UPDATE_ON_LAUNCH=1
 USER user
+# ENTRYPOINT ["tail", "-f", "/dev/null"]
 ENTRYPOINT ["bash", "server-launch.sh"]
