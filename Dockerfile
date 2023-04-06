@@ -59,8 +59,7 @@ RUN apt-get -qq update \
        && chmod -R 755 cfg \
        && rsync -aq addons/ $CSGO_DIR/csgo/addons \
        && rsync -aq cfg/ $CSGO_DIR/csgo/cfg \
-       && rm -rf addons cfg get5.zip \
-       && ln -s /home/user/Steam/linux32/steamclient.so /home/user/.steam/sdk32/steamclient.so" \
+       && rm -rf addons cfg get5.zip" \
     && apt-get -qq purge -y unzip rsync wget \
     && apt-get -qq autoremove -y \
     && apt-get -qq clean \
@@ -100,5 +99,5 @@ RUN INSTALLED_VERSION="$(sed -rn 's/PatchVersion=([0-9]+).([0-9]+).([0-9]+).([0-
 ############
 ENV UPDATE_ON_LAUNCH=1
 USER user
-# ENTRYPOINT ["tail", "-f", "/dev/null"]
-ENTRYPOINT ["bash", "server-launch.sh"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]
+# ENTRYPOINT ["bash", "server-launch.sh"]
