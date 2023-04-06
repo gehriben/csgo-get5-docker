@@ -72,7 +72,7 @@ RUN apt-get -qq update \
 # COPY LAUNCH SCRIPT #
 ######################
 COPY --chown=user --chmod=755 server-scripts/server-launch.sh $HOME_DIR/
-COPY --chown=user --chmod=755 server-scripts/server-launch_3.sh $HOME_DIR/
+COPY --chown=user --chmod=755 server-scripts/server-launch_2.sh $HOME_DIR/
 
 ################
 # COPY CONFIGS #
