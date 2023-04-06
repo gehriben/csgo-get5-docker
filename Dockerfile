@@ -67,8 +67,6 @@ RUN apt-get -qq update \
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/*
 
-# && ln -s /home/user/Steam/linux32/steamclient.so /home/user/.steam/sdk32/steamclient.so" \
-
 ######################
 # COPY LAUNCH SCRIPT #
 ######################
@@ -100,6 +98,5 @@ RUN INSTALLED_VERSION="$(sed -rn 's/PatchVersion=([0-9]+).([0-9]+).([0-9]+).([0-
 # RUN CSGO #
 ############
 ENV UPDATE_ON_LAUNCH=1
-# USER user
-ENTRYPOINT ["tail", "-f", "/dev/null"]
-# ENTRYPOINT ["bash", "server-launch.sh"]
+USER user
+ENTRYPOINT ["bash", "server-launch.sh"]
