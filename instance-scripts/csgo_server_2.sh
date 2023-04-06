@@ -1,4 +1,5 @@
 docker run -it --network=host \
+ -e SERVER_TOKEN=E1302B54CF93BDFB661367D1BF2FC5FF \
  -e PASSWORD=password \
  -e RCON_PASSWORD=rconpassword \
  -e GOTV_PASSWORD=gtovpassword \
