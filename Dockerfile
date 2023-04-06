@@ -59,7 +59,8 @@ RUN apt-get -qq update \
        && chmod -R 755 cfg \
        && rsync -aq addons/ $CSGO_DIR/csgo/addons \
        && rsync -aq cfg/ $CSGO_DIR/csgo/cfg \
-       && rm -rf addons cfg get5.zip" \
+       && rm -rf addons cfg get5.zip \
+       && ln -s /home/user/Steam/linux32/steamclient.so /home/user/.steam/sdk32/steamclient.so" \
     && apt-get -qq purge -y unzip rsync wget \
     && apt-get -qq autoremove -y \
     && apt-get -qq clean \
