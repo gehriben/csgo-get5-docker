@@ -1,4 +1,4 @@
-docker run -it --network=host \
+docker run -dt --network=host \
  -e PASSWORD=password \
  -e RCON_PASSWORD=rconpassword \
  -e GOTV_PASSWORD=gtovpassword \
