@@ -2,10 +2,10 @@ docker run -dt --name csgo_server_21 --network=host \
  -e SERVER_TOKEN=1F4DEF4AF6415C76091D49F71A8F5621 \
  -e PASSWORD=password \
  -e RCON_PASSWORD=rconpassword \
- -e GOTV_PASSWORD=gtovpassword \
+ -e GOTV_PASSWORD=gotvpassword \
  -e PORT=50021 \
  -e GOTV_PORT=51021 \
- -e CUSTOM_ARGS="+sv_lan 0" \
+ -e CUSTOM_ARGS="+sv_lan 0 +tv_enable 1" \
  -e MATCH_CONFIG="{\"num_maps\": 1, \
                 \"maplist\": [\"de_anubis\", \"de_inferno\", \"de_mirage\", \"de_nuke\", \"de_overpass\", \"de_ancient\", \"de_vertigo\"], \
                  \"skip_veto\": 0, \

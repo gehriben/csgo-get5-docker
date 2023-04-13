@@ -2,10 +2,10 @@ docker run -dt --name csgo_server_24 --network=host \
  -e SERVER_TOKEN=2355817D0B038DB132FEF0D635FDAC03 \
  -e PASSWORD=password \
  -e RCON_PASSWORD=rconpassword \
- -e GOTV_PASSWORD=gtovpassword \
+ -e GOTV_PASSWORD=gotvpassword \
  -e PORT=50024 \
  -e GOTV_PORT=51024 \
- -e CUSTOM_ARGS="+sv_lan 0" \
+ -e CUSTOM_ARGS="+sv_lan 0 +tv_enable 1" \
  -e MATCH_CONFIG="{\"num_maps\": 2, \
                 \"maplist\": [\"de_anubis\", \"de_inferno\", \"de_mirage\", \"de_nuke\", \"de_overpass\", \"de_ancient\", \"de_vertigo\"], \
                  \"skip_veto\": 0, \
