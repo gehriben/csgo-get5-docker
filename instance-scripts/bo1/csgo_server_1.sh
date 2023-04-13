@@ -11,7 +11,8 @@ docker run -it --network=host \
                    \"veto_first\": \"team1\", \
                    \"side_type\": \"standard\", \
                    \"team1\": {\"name\": \"Team 1\", \
-                             \"flag\": \"DE\"}, \
+                             \"flag\": \"DE\", \
+                             \"players\": {76561198064704651: \"Senless\"}}, \
                    \"team2\": {\"name\": \"Team 2\", \
                              \"flag\": \"DE\"}, \
                    \"cvars\": {\"hostname\": \"CSGO Server\"}}" \
