@@ -12,7 +12,7 @@ docker run -it --network=host \
                    \"side_type\": \"standard\", \
                    \"team1\": {\"name\": \"Team 1\", \
                              \"flag\": \"DE\"}, \
-                   \"team2\": {\"name': \"Team 2\", \
+                   \"team2\": {\"name\": \"Team 2\", \
                              \"flag\": \"DE\"}, \
                    \"cvars\": {\"hostname\": \"CSGO Server\"}}" \
  gehriben/csgo 
