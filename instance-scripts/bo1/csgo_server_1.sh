@@ -14,5 +14,5 @@ docker run -it --network=host \
                              \"flag\": \"DE\"}, \
                    \"team2\": {\"name': \"Team 2\", \
                              \"flag\": \"DE\"}, \
-                   \"cvars\": {\"hostname\": \"CSGO Server\"}}" \}" \
+                   \"cvars\": {\"hostname\": \"CSGO Server\"}}" \
  gehriben/csgo 
