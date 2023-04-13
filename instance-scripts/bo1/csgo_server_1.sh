@@ -15,5 +15,5 @@ docker run -it --network=host \
                              \"players\": {76561198064704651: \"Senless\"}}, \
                    \"team2\": {\"name\": \"Team 2\", \
                              \"flag\": \"DE\"}, \
-                   \"cvars\": {\"hostname\": \"CSGO Server\"}}" \
+                   \"cvars\": {\"hostname\": \"CSGO Server\", \"get5_check_auths\": 0}}" \
  gehriben/csgo 
