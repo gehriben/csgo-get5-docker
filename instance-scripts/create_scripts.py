@@ -19,7 +19,7 @@ for num_maps in range(1, 4, 1):
 -e GOTV_PASSWORD=gotvpassword \\\n \
 -e PORT="+str(port)+" \\\n \
 -e GOTV_PORT="+str(gotv_port)+" \\\n \
--e CUSTOM_ARGS=\"+sv_lan 0 +tv_enable 1\" \\\n \
+-e CUSTOM_ARGS=\"+sv_lan 0 +tv_enable 1 +tv_advertise_watchable 1\" \\\n \
 -e MATCH_CONFIG=\"{\\\"num_maps\\\": "+str(num_maps)+", \\\n\
                 \\\"maplist\\\": [\\\"de_anubis\\\", \\\"de_inferno\\\", \\\"de_mirage\\\", \\\"de_nuke\\\", \\\"de_overpass\\\", \\\"de_ancient\\\", \\\"de_vertigo\\\"], \\\n \
                 \\\"skip_veto\\\": 0, \\\n \
