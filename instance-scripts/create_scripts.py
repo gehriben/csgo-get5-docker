@@ -11,7 +11,7 @@ for i in range(SCRIPT_COUNT):
     gotv_port = START_GOTV_PORT+i
 
     f = open("bo5/csgo_server_"+str(i+1)+".sh", "w")
-    f.write("docker run -dt --network=host \\\n \
+    f.write("docker run -dt --name csgo_server_"+str(i+1)+" --network=host \\\n \
 -e SERVER_TOKEN="+str(TOKENS[i])+" \\\n \
 -e PASSWORD=password \\\n \
 -e RCON_PASSWORD=rconpassword \\\n \

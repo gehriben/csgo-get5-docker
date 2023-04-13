@@ -1,4 +1,4 @@
-docker run -dt --network=host \
+docker run -dt --name csgo_server_21 --network=host \
  -e SERVER_TOKEN=1F4DEF4AF6415C76091D49F71A8F5621 \
  -e PASSWORD=password \
  -e RCON_PASSWORD=rconpassword \
