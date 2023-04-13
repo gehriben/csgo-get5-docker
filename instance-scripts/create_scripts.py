@@ -6,7 +6,7 @@ TOKENS = list()
 with open("tokens.txt") as file:
     TOKENS = [line.rstrip() for line in file]
 
-for num_maps in range(1, 6, 2):
+for num_maps in range(1, 4, 1):
     for i in range(SCRIPT_COUNT):
         port = START_PORT+i
         gotv_port = START_GOTV_PORT+i
@@ -21,7 +21,7 @@ for num_maps in range(1, 6, 2):
 -e GOTV_PORT="+str(gotv_port)+" \\\n \
 -e CUSTOM_ARGS=\"+sv_lan 0\" \\\n \
 -e MATCH_CONFIG=\"{\\\"num_maps\\\": "+str(num_maps)+", \\\n\
-                \\\"maplist\\\": [\\\"de_dust2\\\", \\\"de_inferno\\\", \\\"de_mirage\\\", \\\"de_nuke\\\", \\\"de_overpass\\\", \\\"de_train\\\", \\\"de_vertigo\\\"], \\\n \
+                \\\"maplist\\\": [\\\"de_anubis\\\", \\\"de_inferno\\\", \\\"de_mirage\\\", \\\"de_nuke\\\", \\\"de_overpass\\\", \\\"de_ancient\\\", \\\"de_vertigo\\\"], \\\n \
                 \\\"skip_veto\\\": 0, \\\n \
                 \\\"veto_first\\\": \\\"team1\\\", \\\n \
                 \\\"side_type\\\": \\\"standard\\\", \\\n \
@@ -29,7 +29,7 @@ for num_maps in range(1, 6, 2):
                             \\\"flag\\\": \\\"DE\\\"}, \\\n \
                 \\\"team2\\\": {\\\"name\\\": \\\"Team 2\\\", \\\n \
                             \\\"flag\\\": \\\"DE\\\"}, \\\n \
-                \\\"cvars\\\": {\\\"hostname\\\": \\\"CSGO Server\\\", \\\"get5_check_auths\\\": 0, \\\"get5_backup_system_enabled\\\": \\\"1\\\"}}\" \\\n \
+                \\\"cvars\\\": {\\\"hostname\\\": \\\"CSGO CAGGTUS SERVER\\\", \\\"get5_check_auths\\\": 0, \\\"get5_backup_system_enabled\\\": \\\"1\\\"}}\" \\\n \
 gehriben/csgo \
 ")
     f.close() 

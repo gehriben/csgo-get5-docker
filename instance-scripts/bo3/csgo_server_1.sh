@@ -7,7 +7,7 @@ docker run -dt --name csgo_server_1 --network=host \
  -e GOTV_PORT=51001 \
  -e CUSTOM_ARGS="+sv_lan 0" \
  -e MATCH_CONFIG="{\"num_maps\": 3, \
-                \"maplist\": [\"de_dust2\", \"de_inferno\", \"de_mirage\", \"de_nuke\", \"de_overpass\", \"de_train\", \"de_vertigo\"], \
+                \"maplist\": [\"de_anubis\", \"de_inferno\", \"de_mirage\", \"de_nuke\", \"de_overpass\", \"de_ancient\", \"de_vertigo\"], \
                  \"skip_veto\": 0, \
                  \"veto_first\": \"team1\", \
                  \"side_type\": \"standard\", \
@@ -15,5 +15,5 @@ docker run -dt --name csgo_server_1 --network=host \
                              \"flag\": \"DE\"}, \
                  \"team2\": {\"name\": \"Team 2\", \
                              \"flag\": \"DE\"}, \
-                 \"cvars\": {\"hostname\": \"CSGO Server\", \"get5_check_auths\": 0, \"get5_backup_system_enabled\": \"1\"}}" \
+                 \"cvars\": {\"hostname\": \"CSGO CAGGTUS SERVER\", \"get5_check_auths\": 0, \"get5_backup_system_enabled\": \"1\"}}" \
  gehriben/csgo 
