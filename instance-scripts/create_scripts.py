@@ -28,7 +28,7 @@ for i in range(SCRIPT_COUNT):
                             \\\"flag\\\": \\\"DE\\\"}, \\\n \
                   \\\"team2\\\": {\\\"name\\\": \\\"Team 2\\\", \\\n \
                             \\\"flag\\\": \\\"DE\\\"}, \\\n \
-                  \\\"cvars\\\": {\\\"hostname\\\": \\\"CSGO Server\\\", \\\"get5_check_auths\\\": 0}}\" \\\n \
+                  \\\"cvars\\\": {\\\"hostname\\\": \\\"CSGO Server\\\", \\\"get5_check_auths\\\": 0, \\\"get5_backup_system_enabled\\\": 1}}\" \\\n \
 gehriben/csgo \
 ")
     f.close() 
