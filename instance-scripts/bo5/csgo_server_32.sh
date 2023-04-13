@@ -1,9 +1,11 @@
 docker run -dt --network=host \
+ -e SERVER_TOKEN=16A36CC1FE131DFF42A2950CC29DFEFA \
  -e PASSWORD=password \
  -e RCON_PASSWORD=rconpassword \
  -e GOTV_PASSWORD=gtovpassword \
  -e PORT=27032 \
  -e GOTV_PORT=27132 \
+ -e CUSTOM_ARGS="+sv_lan 0" \
  -e MATCH_CONFIG="{'num_maps': 5, \
                    'maplist': ['de_dust2', 'de_inferno', 'de_mirage', 'de_nuke', 'de_overpass', 'de_train', 'de_vertigo'], \
                    'skip_veto': 0, \
