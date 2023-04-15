@@ -15,5 +15,5 @@ docker run -dt --name csgo_server_20 --network=host \
                              \"flag\": \"DE\"}, \
                  \"team2\": {\"name\": \"Team 2\", \
                              \"flag\": \"DE\"}, \
-                 \"cvars\": {\"hostname\": \"CSGO CAGGTUS SERVER\", \"get5_check_auths\": 0, \"get5_backup_system_enabled\": \"1\"}}" \
+                 \"cvars\": {\"hostname\": \"CSGO CAGGTUS SERVER\", \"get5_check_auths\": 0, \"get5_backup_system_enabled\": \"1\", \"get5_print_damage\": \"1\"}}" \
  gehriben/csgo 

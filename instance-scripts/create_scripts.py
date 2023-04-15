@@ -29,7 +29,7 @@ for num_maps in range(1, 4, 1):
                             \\\"flag\\\": \\\"DE\\\"}, \\\n \
                 \\\"team2\\\": {\\\"name\\\": \\\"Team 2\\\", \\\n \
                             \\\"flag\\\": \\\"DE\\\"}, \\\n \
-                \\\"cvars\\\": {\\\"hostname\\\": \\\"CSGO CAGGTUS SERVER\\\", \\\"get5_check_auths\\\": 0, \\\"get5_backup_system_enabled\\\": \\\"1\\\"}}\" \\\n \
+                \\\"cvars\\\": {\\\"hostname\\\": \\\"CSGO CAGGTUS SERVER\\\", \\\"get5_check_auths\\\": 0, \\\"get5_backup_system_enabled\\\": \\\"1\\\", \\\"get5_print_damage\\\": \\\"1\\\"}}\" \\\n \
 gehriben/csgo \
 ")
     f.close() 
